@@ -10,6 +10,15 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene("Name Scene");
     }
 
+    public static void onBtnClickQuit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
+
     // Start is called before the first frame update
     void Start()
     {
