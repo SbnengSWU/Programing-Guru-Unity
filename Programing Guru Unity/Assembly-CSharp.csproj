@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scenes\Start Scene\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scenes\Start Scene\Scripts\ChangeScene.cs" />
+    <Compile Include="Assets\Scenes\Name Scene\Name.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
