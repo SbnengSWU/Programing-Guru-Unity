@@ -5,7 +5,8 @@
 ***
 ***1/19 업데이트***
 - 프로젝트의 Scenes 폴더에 각 씬별로 총 6개의 폴더를 추가해놓았습니다.   
-- 플레이 화면 씬에 Empty Object로 모든 맵의 틀만 추가하였고, Canvas에 Empty Object로 PauseMenu 추가하였습니다. 관련 개발 시에 해당 오브젝트들 아래에 작성해주시면 될 것 같습니다.      
+- 플레이 화면 씬에 Empty Object로 모든 맵의 틀만 추가하였고, Canvas에 Empty Object로 PauseMenu 추가하였습니다. 관련 개발 시에 해당 오브젝트들 아래에 작성해주시면 될 것 같습니다.
+- Scripts 폴더 추가 및 ChangeScene 코드를 추가하였습니다. 필요하신 분들은 참고하여 사용하시길 바랍니다.
    
 
 ## 자료 링크
