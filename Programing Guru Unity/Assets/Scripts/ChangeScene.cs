@@ -21,6 +21,11 @@ public class ChangeScene : MonoBehaviour
 #endif
     }
 
+    public void onBtnClickPlay()
+    {
+        SceneManager.LoadScene("Play Scene");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
