@@ -18,8 +18,11 @@ EditorBuildSettings:
     path: Assets/Scenes/03 Manual/Manual Scene.unity
     guid: 0465790500080e64795edd66e3f8d64b
   - enabled: 1
-    path: Assets/Scenes/04 Play Scene/Play Scene.unity
+    path: Assets/Scenes/04 Play Scene/PlayerRoom.unity
     guid: ff0e88f2f44db3e4fa536b149a66406f
+  - enabled: 1
+    path: Assets/Scenes/04 Play Scene/LivingRoom.unity
+    guid: 394a7ff3ab8b96d47b417a0e22328930
   - enabled: 1
     path: Assets/Scenes/05 Game Clear/Clear Scene.unity
     guid: 1d7986f8951efcf499fe5b1dc0b60771

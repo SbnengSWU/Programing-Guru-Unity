@@ -9,6 +9,8 @@ public class ChangeScene : MonoBehaviour
     public GameObject menuFirst;
     public GameObject menuSecond;
 
+    
+
     public void onBtnClickStart()
     {
         SceneManager.LoadScene("Start Scene");
@@ -32,19 +34,18 @@ public class ChangeScene : MonoBehaviour
 
     public void onBtnClickPlay()
     {
-        SceneManager.LoadScene("Play Scene");
+        SceneManager.LoadScene("PlayerRoom");
+    }
+
+    public void onBtnClickPlayLivingRoom()
+    {
+        SceneManager.LoadScene("LivingRoom");
     }
 
     // Start is called before the first frame update
     void Start()
     {
         SaveCheck();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void GameNewStart()
@@ -54,15 +55,23 @@ public class ChangeScene : MonoBehaviour
 
     public void SaveCheck()
     {
-        if (PlayerPrefs.GetInt("SaveKey") != 1)
+
+        string Scene = SceneManager.GetActiveScene().name;
+
+        if (Scene == "Start Scene")
         {
-            menuSecond.SetActive(false);
-            menuFirst.SetActive(true);
+            if (PlayerPrefs.GetInt("SaveKey") != 1)
+            {
+                menuSecond.SetActive(false);
+                menuFirst.SetActive(true);
+            }
+            else
+            {
+                menuFirst.SetActive(false);
+                menuSecond.SetActive(true);
+            }
         }
         else
-        {
-            menuFirst.SetActive(false);
-            menuSecond.SetActive(true);
-        }
+            return;
     }
 }
