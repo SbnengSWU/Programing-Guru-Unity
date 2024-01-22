@@ -45,6 +45,7 @@ public class CameraManager : MonoBehaviour
         maxBound = bound.bounds.max;
         halfHeight = theCamera.orthographicSize;
         halfWidth = halfHeight * Screen.width / Screen.height;
+
     }
 
     // Update is called once per frame
@@ -53,13 +54,13 @@ public class CameraManager : MonoBehaviour
         if(target.gameObject != null)
         {
             targetPosition.Set(target.transform.position.x, target.transform.position.y, this.transform.position.z);    //this는 이 스크립트가 적용된 개체, 생략도 가능
-
             this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
             float clampedX = Mathf.Clamp(this.transform.position.x, minBound.x + halfWidth, maxBound.x - halfWidth);
             float clampedY = Mathf.Clamp(this.transform.position.y, minBound.y + halfHeight, maxBound.y - halfHeight);
 
             this.transform.position = new Vector3(clampedX, clampedY, this.transform.position.z);
+
         }
     }
 

@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject player;
 
+    public Image portraitImg;
     public Text talkText;
     public GameObject talkPanel;
     public GameObject scanObject;
@@ -91,7 +92,6 @@ public class GameManager : MonoBehaviour
         //if (Scene.name == "Start Scene")
         //    SceneManager.LoadScene(scene);
 
-        Debug.Log(camX);
         theCamera.transform.position = new Vector3(x, y, -10);
         //theCamera.SetBound(bound); 플레이어가 현재 있는 위치에 있는 bound로 newBound를 설정할 수 없을까?,,,,
         //Camera.main.transform.position = new Vector3(camX, camY, -10);
@@ -105,20 +105,10 @@ public class GameManager : MonoBehaviour
 
     public void Action(GameObject scanObj)
     {
-        if (isAction)   //Exit Action
-        {
-            isAction = false;
-        }
-        else
-        {   //Enter Action
-
-            isAction = true;
-            scanObject = scanObj;
-
-            ObjData objData = scanObject.GetComponent<ObjData>();
-
-            Talk(objData.id, objData.isNpc);
-        }
+        //액션 컨트롤 -> Talk로 위임
+        scanObject = scanObj;
+        ObjData objData = scanObject.GetComponent<ObjData>();
+        Talk(objData.id, objData.isNpc);
 
         talkPanel.SetActive(isAction);
     }
@@ -127,14 +117,28 @@ public class GameManager : MonoBehaviour
     {
         string talkData = talkManager.GetTalk(id, talkIndex);
 
+        if (talkData == null)
+        {
+            isAction = false;
+            talkIndex = 0;
+            return;
+        }
+
         if (isNpc)
         {
             talkText.text = talkData;
+
+            portraitImg.color = new Color(1, 1, 1, 1);
         }
         else
         {
             talkText.text = talkData;
+
+            portraitImg.color = new Color(1, 1, 1, 0);
         }
+
+        isAction = true;
+        talkIndex++;
     }
 
 }

@@ -79,32 +79,28 @@ public class PlayerMove : MonoBehaviour
             dirVec = Vector3.right;
 
 
-
         Vector2 dir = new Vector2(h, v) * speed;
         rigid.velocity = dir;
 
         //애니메이션
-        if (v == -1)
+        if (anim.GetInteger("hAxisRaw") != h)
         {
-            anim.SetBool("WalkFront", true);
+            anim.SetBool("isChange", true);
+            anim.SetInteger("hAxisRaw", (int)h);
         }
-        else if (v == 1)
+        else if (anim.GetInteger("vAxisRaw") != v)
         {
-            anim.SetBool("WalkBack", true);
+            anim.SetBool("isChange", true);
+            anim.SetInteger("vAxisRaw", (int)v);
         }
         else
-        {
-            anim.SetBool("WalkFront", false);
-            anim.SetBool("WalkBack", false);
-        }
+            anim.SetBool("isChange", false);
 
 
         //Scan Object
         if (Input.GetButtonDown("Jump") && scanObject != null)
         {
-            Debug.Log(scanObject.name);
             manager.Action(scanObject);
-            Debug.Log("print");
         }
     }
 
