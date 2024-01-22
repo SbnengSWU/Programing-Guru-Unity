@@ -5,8 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    //시작 버튼
+
+    public GameObject menuFirst;
+    public GameObject menuSecond;
+
+    
+
     public void onBtnClickStart()
+    {
+        SceneManager.LoadScene("Start Scene");
+    }
+
+    //시작 버튼
+    public void onBtnClickName()
     {
         SceneManager.LoadScene("Name Scene");
     }
@@ -21,15 +32,46 @@ public class ChangeScene : MonoBehaviour
 #endif
     }
 
+    public void onBtnClickPlay()
+    {
+        SceneManager.LoadScene("PlayerRoom");
+    }
+
+    public void onBtnClickPlayLivingRoom()
+    {
+        SceneManager.LoadScene("LivingRoom");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        SaveCheck();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void GameNewStart()
     {
-        
+        PlayerPrefs.DeleteAll();
+    }
+
+    public void SaveCheck()
+    {
+
+        string Scene = SceneManager.GetActiveScene().name;
+
+        if (Scene == "Start Scene")
+        {
+            if (PlayerPrefs.GetInt("SaveKey") != 1)
+            {
+                menuSecond.SetActive(false);
+                menuFirst.SetActive(true);
+            }
+            else
+            {
+                menuFirst.SetActive(false);
+                menuSecond.SetActive(true);
+            }
+        }
+        else
+            return;
     }
 }

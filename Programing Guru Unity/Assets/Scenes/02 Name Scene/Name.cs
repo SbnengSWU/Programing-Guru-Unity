@@ -12,7 +12,7 @@ public class Name : MonoBehaviour
     public void onClickNameCheck()
     {
         playerName = playerNameInput.GetComponent<InputField>().text;
-        SceneManager.LoadScene("Start Scene");  //이후에 다음 씬으로 변경
+        SceneManager.LoadScene("PlayerRoom");  //이후에 다음 씬으로 변경
         print(playerName);
     }
 
