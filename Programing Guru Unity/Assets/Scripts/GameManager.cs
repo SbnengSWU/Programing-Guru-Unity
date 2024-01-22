@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public int talkIndex;
 
 
-    // Start is called before the first frame update
+
     void Start()
     {
         theCamera = FindObjectOfType<CameraManager>();
@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
         GameLoad();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         //ESC를 눌렀을 때 나오는 창
@@ -65,7 +65,10 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("PlayerY", player.transform.position.y);
         PlayerPrefs.SetString("PlayerMap", scene.name);
 
-        //현재까지 얻은 아이템 목록
+        // + 현재까지 얻은 아이템 목록
+
+        // + 퀘스트 진행도
+
 
         PlayerPrefs.Save();
 
@@ -87,7 +90,7 @@ public class GameManager : MonoBehaviour
 
         float x = PlayerPrefs.GetFloat("PlayerX");
         float y = PlayerPrefs.GetFloat("PlayerY");
-        string scene = PlayerPrefs.GetString("PlayerMap");
+        //string scene = PlayerPrefs.GetString("PlayerMap");
 
         //if (Scene.name == "Start Scene")
         //    SceneManager.LoadScene(scene);
@@ -102,6 +105,9 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+
+    // 이후 메서드는 플레이어 액션과 대화창 관련 메소드
 
     public void Action(GameObject scanObj)
     {
