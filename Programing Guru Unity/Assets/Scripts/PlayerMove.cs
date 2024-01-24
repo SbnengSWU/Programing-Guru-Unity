@@ -4,120 +4,55 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+
     public float speed = 5f;
 
-    float h;
-    float v;
+    public int walkCount;
+    protected int currentWalkCount;
 
-    bool isHorizonMove;
-    bool isVerticalMove;
+    protected Vector3 dirVec;
 
-    Rigidbody2D rigid;
+    //public CapsuleCollider2D collider;
+    public Animator anim;
 
-    SpriteRenderer spriteRenderer;
-    Animator anim;
-
-    private static PlayerMove instance;
-
-    public string currentMapName;
-
-    GameObject scanObject;
-
-    public GameManager manager;
-
-
-    Vector3 dirVec;
-
-    // Start is called before the first frame update
-    void Awake()
+    protected void Move(string _dir)
     {
-        //if (instance != null)
-        //{
-        //    Destroy(gameObject);
-        //    return;
-        //}
-        //else
-        //{
-        //    instance = this;
-        //    DontDestroyOnLoad(this.gameObject);
-        //}
-
-        rigid = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        anim = GetComponent<Animator>();
+        StartCoroutine(MoveCoroutine(_dir));
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator MoveCoroutine(string _dir)
     {
-        //이동
-        h = Input.GetAxisRaw("Horizontal");
-        v = Input.GetAxisRaw("Vertical");
 
-        //버튼 이동 방향 체크
-        bool hDown = Input.GetButtonDown("Horizontal");
-        bool vDown = Input.GetButtonDown("Vertical");
-        bool hUp = Input.GetButtonUp("Horizontal");
-        bool vUp = Input.GetButtonUp("Vertical");
+        dirVec.Set(0, 0, dirVec.z);
 
-        //수평 이동 체크
-        if (hDown)
-            isHorizonMove = true;
-        else if (vDown)
-            isHorizonMove = false;
-        else if (hUp || vUp)
-            isHorizonMove = h != 0;
-
-        //방향
-        if (vDown && v == 1)
-            dirVec = Vector3.up;
-        else if (vDown && v == -1)
-            dirVec = Vector3.down;
-        else if (hDown && h == -1)
-            dirVec = Vector3.left ;
-        else if (hDown && h == 1)
-            dirVec = Vector3.right;
-
-
-        Vector2 dir = new Vector2(h, v) * speed;
-        rigid.velocity = dir;
-
-        //애니메이션
-        if (anim.GetInteger("hAxisRaw") != h)
+        switch (_dir)
         {
-            anim.SetBool("isChange", true);
-            anim.SetInteger("hAxisRaw", (int)h);
+            case "UP":
+                dirVec.y = 1f;
+                break;
+
+            case "DOWN":
+                dirVec.y = -1f;
+                break;
+
+            case "RIGHT":
+                dirVec.x = 1f;
+                break;
+
+            case "LEFT":
+                dirVec.x = -1f;
+                break;
         }
-        else if (anim.GetInteger("vAxisRaw") != v)
-        {
-            anim.SetBool("isChange", true);
-            anim.SetInteger("vAxisRaw", (int)v);
-        }
-        else
-            anim.SetBool("isChange", false);
 
-
-        //Scan Object
-        if (Input.GetButtonDown("Jump") && scanObject != null)
+        while (currentWalkCount < walkCount)
         {
-            manager.Action(scanObject);
+            transform.Translate(dirVec.x * speed, dirVec.y * speed, 0);
+
+            currentWalkCount++;
+            yield return new WaitForSeconds(0.01f);
         }
     }
 
-    private void FixedUpdate()
-    {
-
-        //Ray
-        Debug.DrawRay(rigid.position, dirVec * 0.8f, new Color(0, 1, 0));
-        RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, dirVec, 0.8f, LayerMask.GetMask("Object"));
-
-        if (rayHit.collider != null)
-        {
-            scanObject = rayHit.collider.gameObject;
-        }
-        else
-            scanObject = null;
-    }
 
 
 }
