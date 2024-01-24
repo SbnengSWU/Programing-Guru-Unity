@@ -53,21 +53,21 @@
     <UnityVersion>2020.3.30f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\2d-extras-2020.3\Runtime\Tiles\AnimatedTile\AnimatedTile.cs" />
-    <Compile Include="Assets\2d-extras-2020.3\Runtime\Tiles\WeightedRandomTile\WeightedRandomTile.cs" />
+    <Compile Include="Assets\2d-extras-2020.3\Runtime\Tiles\RandomTile\RandomTile.cs" />
     <Compile Include="Assets\2d-extras-2020.3\Runtime\GridInformation\GridInformation.cs" />
     <Compile Include="Assets\2d-extras-2020.3\Runtime\Tiles\TerrainTile\TerrainTile.cs" />
-    <Compile Include="Assets\2d-extras-2020.3\Runtime\Tiles\RuleTile\RuleTile.cs" />
-    <Compile Include="Assets\2d-extras-2020.3\Runtime\Brushes\TintTextureGenerator.cs" />
     <Compile Include="Assets\2d-extras-2020.3\Runtime\Tiles\PipelineTile\PipelineTile.cs" />
-    <Compile Include="Assets\2d-extras-2020.3\Runtime\Tiles\RuleOverrideTile\AdvancedRuleOverrideTile.cs" />
-    <Compile Include="Assets\2d-extras-2020.3\Runtime\Tiles\HexagonalRuleTile\HexagonalRuleTile.cs" />
-    <Compile Include="Assets\2d-extras-2020.3\Runtime\Tiles\IsometricRuleTile\IsometricRuleTile.cs" />
+    <Compile Include="Assets\2d-extras-2020.3\Runtime\Brushes\TintTextureGenerator.cs" />
     <Compile Include="Assets\2d-extras-2020.3\Runtime\Tiles\RuleOverrideTile\RuleOverrideTile.cs" />
-    <Compile Include="Assets\2d-extras-2020.3\Runtime\Tiles\RandomTile\RandomTile.cs" />
+    <Compile Include="Assets\2d-extras-2020.3\Runtime\Tiles\IsometricRuleTile\IsometricRuleTile.cs" />
+    <Compile Include="Assets\2d-extras-2020.3\Runtime\Tiles\HexagonalRuleTile\HexagonalRuleTile.cs" />
+    <Compile Include="Assets\2d-extras-2020.3\Runtime\Tiles\RuleTile\RuleTile.cs" />
+    <Compile Include="Assets\2d-extras-2020.3\Runtime\Tiles\RuleOverrideTile\AdvancedRuleOverrideTile.cs" />
+    <Compile Include="Assets\2d-extras-2020.3\Runtime\Tiles\AnimatedTile\AnimatedTile.cs" />
+    <Compile Include="Assets\2d-extras-2020.3\Runtime\Tiles\WeightedRandomTile\WeightedRandomTile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\2d-extras-2020.3\Runtime\Unity.2D.Tilemap.Extras.asmdef" />
@@ -299,14 +299,8 @@
     <Reference Include="UnityEditor.Graphs">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.Android.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
-      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
