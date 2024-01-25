@@ -9,7 +9,7 @@ public class InventoryUI : MonoBehaviour
     public Slot[] slots;
 
     public GameObject inventoryPanel;
-    bool activeInventory = false;
+    bool activeInventory = true;
 
     private void Start()
     {
