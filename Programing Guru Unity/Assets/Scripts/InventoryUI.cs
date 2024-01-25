@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
-    Inventory inven;
-
     public Slot[] slots;
 
     public GameObject inventoryPanel;
@@ -14,7 +12,6 @@ public class InventoryUI : MonoBehaviour
     private void Start()
     {
         inventoryPanel.SetActive(activeInventory);
-        inven.onChangeItem += RedrawSlotUI;
     }
 
     private void Update()
@@ -25,15 +22,15 @@ public class InventoryUI : MonoBehaviour
             inventoryPanel.SetActive(activeInventory);
         }
     }
-    void RedrawSlotUI()
+    public void RedrawSlotUI()
     {
-        for(int i = 0; i < slots.Length; i++)
+        for (int i = 0; i < slots.Length; i++)
         {
             slots[i].RemoveSlot();
         }
-        for (int i = 0; i < inven.items.Count; i++)
+        for (int i = 0; i < Inventory.instance.items.Count; i++)
         {
-            slots[i].item = inven.items[i];
+            slots[i].item = Inventory.instance.items[i];
             slots[i].UpdateSlotUI();
         }
     }

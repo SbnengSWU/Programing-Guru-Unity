@@ -21,6 +21,7 @@ public class Inventory : MonoBehaviour
 
     public List<Item> items = new List<Item>();
     PlayerManager pManager;
+    public InventoryUI invui;
 
     public delegate void OnChangeItem();
     public OnChangeItem onChangeItem;
@@ -28,11 +29,10 @@ public class Inventory : MonoBehaviour
 
     public bool AddItem(Item _item)
     {
-        if(items.Count < 7)
+        if (items.Count < 7)
         {
             items.Add(_item);
-            if(onChangeItem != null)
-            onChangeItem.Invoke();
+            invui.RedrawSlotUI();
             return true;
         }
         return false;

@@ -10,8 +10,8 @@ public class Slot : MonoBehaviour
 
     public void UpdateSlotUI()
     {
-        Debug.Log("UpdateSlotUi");
         itemIcon.sprite = item.itemImage;
+        Debug.Log(item.itemName);
         itemIcon.gameObject.SetActive(true);
     }
 
