@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
 
     public TalkManager talkManager;
     private CameraManager theCamera;
+    public DialogueManager dManager;
+
+    public AudioSource audioSource;
 
     public bool isAction;
     public int talkIndex;
@@ -39,7 +42,10 @@ public class GameManager : MonoBehaviour
         if (Input.GetButtonDown("Cancel"))
         {
             if (menuSet.activeSelf)
+            {
                 menuSet.SetActive(false);
+                audioSource.Play();
+            }
             else
                 menuSet.SetActive(true);
         }
@@ -109,17 +115,19 @@ public class GameManager : MonoBehaviour
 
     // 이후 메서드는 플레이어 액션과 대화창 관련 메소드
 
-    public void Action(GameObject scanObj)
+    /*public void Action(GameObject scanObj)
     {
         //액션 컨트롤 -> Talk로 위임
         scanObject = scanObj;
         ObjData objData = scanObject.GetComponent<ObjData>();
-        Talk(objData.id, objData.isNpc);
+        isAction = dManager.Talk(objData.id, objData.isNpc);
 
         talkPanel.SetActive(isAction);
-    }
+    }*/
 
-    void Talk(int id, bool isNpc)
+    //Talk 메서드 -> DialogueManager로 이동
+
+    /*void Talk(int id, bool isNpc)
     {
         string talkData = talkManager.GetTalk(id, talkIndex);
 
@@ -129,6 +137,7 @@ public class GameManager : MonoBehaviour
             talkIndex = 0;
             return;
         }
+
 
         if (isNpc)
         {
@@ -145,6 +154,6 @@ public class GameManager : MonoBehaviour
 
         isAction = true;
         talkIndex++;
-    }
+    }*/
 
 }

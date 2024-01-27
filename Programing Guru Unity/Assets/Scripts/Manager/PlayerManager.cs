@@ -6,6 +6,7 @@ public class PlayerManager : PlayerMove
 {
     private static PlayerManager instance;
     public GameManager manager;
+    public DialogueManager dManager;
     Inventory inventory;
 
     public string currentMapName;
@@ -15,7 +16,7 @@ public class PlayerManager : PlayerMove
     bool isHorizonMove;
     bool isVerticalMove;
 
-    private bool canMove = true;
+    public bool canMove = true;
 
     Rigidbody2D rigid;
 
@@ -64,40 +65,55 @@ public class PlayerManager : PlayerMove
         else if (hUp || vUp)
             isHorizonMove = h != 0;
 
-        //방향
-        if (vDown && v == 1)
-            dirVec = Vector3.up;
-        else if (vDown && v == -1)
-            dirVec = Vector3.down;
-        else if (hDown && h == -1)
-            dirVec = Vector3.left;
-        else if (hDown && h == 1)
-            dirVec = Vector3.right;
 
-
-        Vector2 dir = new Vector2(h, v) * speed;
-        rigid.velocity = dir;
-
-        //애니메이션
-        if (anim.GetInteger("hAxisRaw") != h)
+        if (canMove)
         {
-            anim.SetBool("isChange", true);
-            anim.SetInteger("hAxisRaw", (int)h);
-        }
-        else if (anim.GetInteger("vAxisRaw") != v)
-        {
-            anim.SetBool("isChange", true);
-            anim.SetInteger("vAxisRaw", (int)v);
+            //방향
+            if (vDown && v == 1)
+                dirVec = Vector3.up;
+            else if (vDown && v == -1)
+                dirVec = Vector3.down;
+            else if (hDown && h == -1)
+                dirVec = Vector3.left;
+            else if (hDown && h == 1)
+                dirVec = Vector3.right;
+
+
+            //애니메이션
+            if (anim.GetInteger("hAxisRaw") != h)
+            {
+                anim.SetBool("isChange", true);
+                anim.SetInteger("hAxisRaw", (int)h);
+            }
+            else if (anim.GetInteger("vAxisRaw") != v)
+            {
+                anim.SetBool("isChange", true);
+                anim.SetInteger("vAxisRaw", (int)v);
+            }
+            else
+                anim.SetBool("isChange", false);
+
+
+            Vector2 dir = new Vector2(h, v) * speed;
+            rigid.velocity = dir;
+
+
+            //Scan Object
+            if (Input.GetButtonDown("Jump") && scanObject != null)
+            {
+                dManager.Action(scanObject);
+            }
         }
         else
-            anim.SetBool("isChange", false);
-
-
-        //Scan Object
-        if (Input.GetButtonDown("Jump") && scanObject != null)
         {
-            manager.Action(scanObject);
+            Vector2 dir = new Vector2(h, v) * 0;
+            rigid.velocity = dir;
+
+            anim.SetInteger("hAxisRaw", 0);
+            anim.SetInteger("vAxisRaw", 0);
         }
+
+        
     }
 
     private void FixedUpdate()
