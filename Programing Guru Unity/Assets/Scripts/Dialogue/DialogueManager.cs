@@ -8,6 +8,7 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager instance;
     private GameManager gManager;
     public TalkManager talkManager;
+    public QuestManager questManager;
 
     #region Singleton
     private void Awake()
@@ -55,6 +56,7 @@ public class DialogueManager : MonoBehaviour
 
     public bool Talk(int id, bool isNpc)
     {
+        int questTalkIndex = questManager.GetQuestTalkIndex(id);
         string talkData = "";
 
         if (text.isAnim)
@@ -64,13 +66,15 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            talkData = talkManager.GetTalk(id, count);
+            talkData = talkManager.GetTalk(id + questTalkIndex, count);
         }
 
+        //End Talk
         if (talkData == null)
         {
             isAction = false;
             count = 0;
+            Debug.Log(questManager.CheckQuest(id));
             return false;
         }
 
