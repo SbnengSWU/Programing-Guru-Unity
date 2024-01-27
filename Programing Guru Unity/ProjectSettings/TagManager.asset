@@ -15,7 +15,7 @@ TagManager:
   - Border
   - Player
   - Object
-  - 
+  - Bound
   - 
   - 
   - 
@@ -50,4 +50,7 @@ TagManager:
     locked: 0
   - name: Character
     uniqueID: 2575948621
+    locked: 0
+  - name: UI
+    uniqueID: 4068894537
     locked: 0

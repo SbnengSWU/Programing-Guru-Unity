@@ -57,22 +57,42 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
-    <Compile Include="Assets\Scripts\ObjData.cs" />
+    <Compile Include="Assets\Scripts\Item &amp; Inventory\InventoryUI.cs" />
+    <Compile Include="Assets\Scripts\Item &amp; Inventory\Inventory.cs" />
+    <Compile Include="Assets\Scripts\Item &amp; Inventory\ObjData.cs" />
+    <Compile Include="Assets\Scenes\05 Game Clear\Scripts\TextBlink.cs" />
+    <Compile Include="Assets\Scripts\Item &amp; Inventory\Item.cs" />
+    <Compile Include="Assets\Scripts\Item &amp; Inventory\Slot.cs" />
     <Compile Include="Assets\Scripts\Manager\TalkManager.cs" />
+    <Compile Include="Assets\Scripts\Item &amp; Inventory\ItemDatabase.cs" />
     <Compile Include="Assets\Scripts\Manager\CameraManager.cs" />
-    <Compile Include="Assets\Scripts\StartPoint.cs" />
+    <Compile Include="Assets\Scripts\TransferMap\StartPoint.cs" />
+    <Compile Include="Assets\Scripts\Event\EventList\Test.cs" />
+    <Compile Include="Assets\Scripts\Event\TypeEffect_Event.cs" />
+    <Compile Include="Assets\Scripts\Item &amp; Inventory\FieldItems.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\TypeEffect.cs" />
+    <Compile Include="Assets\Scripts\Manager\OrderManager.cs" />
     <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Manager\PlayerManager.cs" />
-    <Compile Include="Assets\Scripts\TransferMap.cs" />
-    <Compile Include="Assets\Scripts\ChangeScene.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\TransferMap\TransferMap.cs" />
+    <Compile Include="Assets\Scripts\TransferMap\ChangeScene.cs" />
+    <Compile Include="Assets\Scripts\Event\DialogueManager_Event.cs" />
+    <Compile Include="Assets\Scripts\Event\EventManager.cs" />
+    <Compile Include="Assets\Scripts\Event\EventList\Prologue.cs" />
     <Compile Include="Assets\Scenes\02 Name Scene\Name.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Manager\NPCManager.cs" />
-    <Compile Include="Assets\Scripts\InventoryUI.cs" />
-    <Compile Include="Assets\Scripts\Item.cs" />
-    <Compile Include="Assets\Scripts\ItemDatabase.cs" />
-    <Compile Include="Assets\Scripts\FieldItems.cs" />
-    <Compile Include="Assets\Scripts\Inventory.cs" />
-    <Compile Include="Assets\Scripts\Slot.cs" />
+    <Compile Include="Assets\Scripts\DontDestroy.cs" />
+    <Compile Include="Assets\Scripts\MapNameUI.cs" />
+    <Compile Include="Assets\Scripts\Quest\QuestManager.cs" />
+    <Compile Include="Assets\Scripts\Quest\QuestData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Scenes\03 Manual\Fonts\fonts-master\fonts-master\LICENSE.txt" />
+    <None Include="Assets\Fonts\Fonts_Manual\fonts-master\LICENSE.txt" />
+    <None Include="Assets\Fonts\Fonts_Clear\dist\LICENSE.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
