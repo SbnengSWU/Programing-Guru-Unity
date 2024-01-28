@@ -10,10 +10,12 @@ public class Test : MonoBehaviour
     public Dialogue dialogue;
 
     private EventManager theEM;
+    private GameManager theGM;
 
     void Start()
     {
         theEM = FindObjectOfType<EventManager>();
+        theGM = FindObjectOfType<GameManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -24,13 +26,14 @@ public class Test : MonoBehaviour
             {
                 theEM.ShowDialogue(dialogue);
                 isTriggered = true;
+                IsTriggered();
             }
         }
         
     }
 
-    public bool IsTriggered()
+    public void IsTriggered()
     {
-        return true;
+        theGM.eventIndex = 2;
     }
 }

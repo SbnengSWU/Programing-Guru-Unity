@@ -25,6 +25,7 @@ public class Inventory : MonoBehaviour
 
     public delegate void OnChangeItem();
     public OnChangeItem onChangeItem;
+    FieldItems fieldItems;
 
 
     public bool AddItem(Item _item)
@@ -38,13 +39,20 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("FieldItem"))
         {
-            FieldItems fieldItems = collision.GetComponent<FieldItems>();
-            if (AddItem(fieldItems.GetItem()))
-                fieldItems.DestroyItem();
+            fieldItems = collision.GetComponent<FieldItems>();
+
+
         }
     }
+
+    public void GetItem()
+    {
+        if (AddItem(fieldItems.GetItem()))
+            fieldItems.DestroyItem();
+    }
+    
 }

@@ -39,9 +39,12 @@ public class DialogueManager : MonoBehaviour
 
     private int count; //대화 진행 상황 카운트
     public bool isAction;
+    public bool isQuestItem;
 
     public Animator animSprite;
     public Animator animDialogueWindow;
+
+    public Inventory inven;
 
 
     public void Action(GameObject scanObj)
@@ -49,14 +52,14 @@ public class DialogueManager : MonoBehaviour
         //액션 컨트롤 -> Talk로 위임
         scanObject = scanObj;
         ObjData objData = scanObject.GetComponent<ObjData>();
-        isAction = Talk(objData.id, objData.isNpc);
+        isAction = Talk(objData.id, objData.isNpc, objData.isQuestItem);
 
         talkPanel.SetBool("isShow",isAction);
+
     }
 
-    public bool Talk(int id, bool isNpc)
+    public bool Talk(int id, bool isNpc, bool isQuestItem)
     {
-        int questTalkIndex = questManager.GetQuestTalkIndex(id);
         string talkData = "";
 
         if (text.isAnim)
@@ -66,7 +69,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            talkData = talkManager.GetTalk(id + questTalkIndex, count);
+            talkData = talkManager.GetTalk(id, count);
         }
 
         //End Talk
@@ -74,7 +77,8 @@ public class DialogueManager : MonoBehaviour
         {
             isAction = false;
             count = 0;
-            Debug.Log(questManager.CheckQuest(id));
+            if(isQuestItem)
+                inven.GetItem();
             return false;
         }
 

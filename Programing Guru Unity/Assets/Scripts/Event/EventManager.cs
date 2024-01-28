@@ -7,7 +7,7 @@ public class EventManager : MonoBehaviour
 {
     public static EventManager instance;
 
-    #region Singleton
+    /*#region Singleton
     private void Awake()
     {
         if (instance == null)
@@ -20,7 +20,7 @@ public class EventManager : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    #endregion Singleton
+    #endregion Singleton*/
 
     public Text text;
     public SpriteRenderer rendererSprite;

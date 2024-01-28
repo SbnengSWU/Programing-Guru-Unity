@@ -58,10 +58,11 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\MapNameUI.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
+    <Compile Include="Assets\Scripts\Event\OpeningManager.cs" />
     <Compile Include="Assets\Scripts\Item &amp; Inventory\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\Item &amp; Inventory\Inventory.cs" />
     <Compile Include="Assets\Scripts\Item &amp; Inventory\ObjData.cs" />
-    <Compile Include="Assets\Scenes\05 Game Clear\Scripts\TextBlink.cs" />
+    <Compile Include="Assets\Scenes\06 Game Clear\Scripts\TextBlink.cs" />
     <Compile Include="Assets\Scripts\Item &amp; Inventory\Item.cs" />
     <Compile Include="Assets\Scripts\Item &amp; Inventory\Slot.cs" />
     <Compile Include="Assets\Scripts\DontDestroy.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\Scripts\Manager\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Manager\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\Event\EventList\Opening.cs" />
     <Compile Include="Assets\Scripts\TransferMap\TransferMap.cs" />
     <Compile Include="Assets\Scripts\TransferMap\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\Event\DialogueManager_Event.cs" />
@@ -88,6 +90,7 @@
     <Compile Include="Assets\Scripts\Dialogue\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Manager\NPCManager.cs" />
     <Compile Include="Assets\Scripts\Quest\QuestData.cs" />
+    <Compile Include="Assets\Scripts\Event\TextManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scenes\03 Manual\Fonts\fonts-master\fonts-master\LICENSE.txt" />

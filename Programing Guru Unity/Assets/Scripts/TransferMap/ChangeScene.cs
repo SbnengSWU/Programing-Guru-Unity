@@ -27,6 +27,11 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene("Manual Scene");
     }
 
+    public void onBtnClickPrologue()
+    {
+        SceneManager.LoadScene("EventScene1");
+    }
+
     //종료 버튼
     public static void onBtnClickQuit()
     {

@@ -12,10 +12,12 @@ public class Prologue : MonoBehaviour
     public Dialogue dialogue;
 
     private EventManager theEM;
+    private GameManager theGM;
 
     void Start()
     {
         theEM = FindObjectOfType<EventManager>();
+        theGM = FindObjectOfType<GameManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,8 +28,14 @@ public class Prologue : MonoBehaviour
             {
                 theEM.ShowDialogue(dialogue);
                 isTriggered = true;
+                IsTriggered();
             }
         }
 
+    }
+
+    public void IsTriggered()
+    {
+        theGM.eventIndex = 1;
     }
 }

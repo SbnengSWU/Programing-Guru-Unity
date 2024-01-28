@@ -25,7 +25,10 @@ public class GameManager : MonoBehaviour
 
     public bool isAction;
     public int talkIndex;
+    public int eventIndex;
 
+    public GameObject prologue;
+    public GameObject livingroom;
 
 
     void Start()
@@ -56,8 +59,6 @@ public class GameManager : MonoBehaviour
     {
         Scene scene = SceneManager.GetActiveScene();
 
-        //string bound = theCamera.GetBound();
-
         //세이브 된 적이 있는지 확인하는 용도, 1이면 있음
         PlayerPrefs.SetInt("SaveKey", 1);
 
@@ -75,6 +76,10 @@ public class GameManager : MonoBehaviour
 
         // + 퀘스트 진행도
 
+        // 스토리 진행도
+        PlayerPrefs.SetInt("Event", eventIndex);
+        Debug.Log(eventIndex);
+
 
         PlayerPrefs.Save();
 
@@ -88,22 +93,27 @@ public class GameManager : MonoBehaviour
         if (PlayerPrefs.GetInt("SaveKey") != 1 || !PlayerPrefs.HasKey("SaveKey"))
             return;
 
-        //Scene Scene = SceneManager.GetActiveScene();
-
-        //string bound = PlayerPrefs.GetString("Bound");
         float camX = PlayerPrefs.GetFloat("CameraX");
         float camY = PlayerPrefs.GetFloat("CameraY");
 
         float x = PlayerPrefs.GetFloat("PlayerX");
         float y = PlayerPrefs.GetFloat("PlayerY");
-        //string scene = PlayerPrefs.GetString("PlayerMap");
 
-        //if (Scene.name == "Start Scene")
-        //    SceneManager.LoadScene(scene);
+        eventIndex = PlayerPrefs.GetInt("Event");
+
+        switch (eventIndex)
+        {
+            case 1:
+                prologue.SetActive(false);
+                break;
+
+            case 2:
+                prologue.SetActive(false);
+                livingroom.SetActive(false);
+                break;
+        }
 
         theCamera.transform.position = new Vector3(x, y, -10);
-        //theCamera.SetBound(bound); 플레이어가 현재 있는 위치에 있는 bound로 newBound를 설정할 수 없을까?,,,,
-        //Camera.main.transform.position = new Vector3(camX, camY, -10);
         player.transform.position = new Vector3(x, y, -1);
     }
 
@@ -113,47 +123,5 @@ public class GameManager : MonoBehaviour
     }
 
 
-    // 이후 메서드는 플레이어 액션과 대화창 관련 메소드
-
-    /*public void Action(GameObject scanObj)
-    {
-        //액션 컨트롤 -> Talk로 위임
-        scanObject = scanObj;
-        ObjData objData = scanObject.GetComponent<ObjData>();
-        isAction = dManager.Talk(objData.id, objData.isNpc);
-
-        talkPanel.SetActive(isAction);
-    }*/
-
-    //Talk 메서드 -> DialogueManager로 이동
-
-    /*void Talk(int id, bool isNpc)
-    {
-        string talkData = talkManager.GetTalk(id, talkIndex);
-
-        if (talkData == null)
-        {
-            isAction = false;
-            talkIndex = 0;
-            return;
-        }
-
-
-        if (isNpc)
-        {
-            talkText.text = talkData;
-
-            portraitImg.color = new Color(1, 1, 1, 1);
-        }
-        else
-        {
-            talkText.text = talkData;
-
-            portraitImg.color = new Color(1, 1, 1, 0);
-        }
-
-        isAction = true;
-        talkIndex++;
-    }*/
 
 }

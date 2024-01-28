@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/01 Start Scene/Start Scene.unity
     guid: fdc7b134c0a0ae94fbe6f8879d67db7f
@@ -18,15 +15,24 @@ EditorBuildSettings:
     path: Assets/Scenes/03 Manual/Manual Scene.unity
     guid: 0465790500080e64795edd66e3f8d64b
   - enabled: 1
-    path: Assets/Scenes/04 Play Scene/PlayerRoom.unity
+    path: Assets/Scenes/04 Prologue Scene/Prologue.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/04 Prologue Scene/EventScene1.unity
+    guid: e22f15931da3a5d43889757d24b363e2
+  - enabled: 1
+    path: Assets/Scenes/04 Prologue Scene/EventScene2.unity
+    guid: 9d12ce4c4c5000a4c98957107982c17d
+  - enabled: 1
+    path: Assets/Scenes/05 Play Scene/PlayerRoom.unity
     guid: ff0e88f2f44db3e4fa536b149a66406f
   - enabled: 1
-    path: Assets/Scenes/04 Play Scene/LivingRoom.unity
+    path: Assets/Scenes/05 Play Scene/LivingRoom.unity
     guid: 394a7ff3ab8b96d47b417a0e22328930
   - enabled: 1
-    path: Assets/Scenes/05 Game Clear/Clear Scene.unity
+    path: Assets/Scenes/06 Game Clear/Clear Scene.unity
     guid: 1d7986f8951efcf499fe5b1dc0b60771
   - enabled: 1
-    path: Assets/Scenes/06 Game Over/Over Scene.unity
+    path: Assets/Scenes/07 Game Over/Over Scene.unity
     guid: da89e75234118e94c81b5b1cd91c5b92
   m_configObjects: {}

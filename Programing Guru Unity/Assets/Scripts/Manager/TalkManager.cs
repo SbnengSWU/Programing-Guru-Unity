@@ -32,10 +32,18 @@ public class TalkManager : MonoBehaviour
         talkData.Add(4000, new string[] { "책장이다. \n꽤나 오래 전 책들이 꽂혀 있다." });
 
         //NPC
-        talkData.Add(100, new string[] { "안녕?:0", "이 곳에 처음 왔구나?:1","잘 부탁해!:0" });
+        talkData.Add(100, new string[] { "뭐 하고 있어?:0", "얼른 집을 둘러봐야지!:0",
+                                                "자, 얼른 다시 가봐!:0","어휴 참... 알겠어! 가요 가!:1" });
+        talkData.Add(200, new string[] { "현관문은 집 안에서 찾아야 할 것들을 전부 찾아야 나갈 수 있어.:0", "총 3개니까, 얼른 다시 찾아봐!:0"});
 
         //Item
         talkData.Add(10000, new string[] { "하트를 주웠다." });
+        talkData.Add(10100, new string[] { "장난감 상자다.\n할머니가 어릴 때 갖고 노시던 걸까?", "내가 아끼는 곰인형이랑 많이 닮았네... 그러고보니 할머니가 주셨었지.",
+                                            "일단 챙겨가자.","곰인형을 챙겼다." });   //곰인형
+        talkData.Add(10200, new string[] { "화장대다.\n자세히 보니 할머니가 전에 주셨던 것과 똑같은 목걸이가 들어 있다.","할머니...","목걸이를 챙겼다." });   //목걸이
+        talkData.Add(10300, new string[] { "책상이다. \n예쁜 자수가 놓인 손수건이 놓여 있다.", "뒷 면을 보니 할머니의 성함이 자수로 놓여 있다.", 
+                                            "이것도 할머니가 주셨던 손수건이랑 똑같이 생겼어...","손수건을 챙겼다." });   //손수건
+        talkData.Add(10400, new string[] { "할머니가 아까 입으셨던 한복과 같은 한복인 것 같다.","낡았지만 관리가 잘 되었는지 깔끔하다.","할머니... 얼른 보고 싶어요.","낡은 한복을 챙겼다." });   //낡은 한복
 
 
         //Quest Talk
@@ -48,6 +56,9 @@ public class TalkManager : MonoBehaviour
         //Portrait
         portraitData.Add(100 + 0, portraitArr[0]);
         portraitData.Add(100 + 1, portraitArr[1]);
+
+        portraitData.Add(200 + 0, portraitArr[2]);
+        portraitData.Add(200 + 1, portraitArr[3]);
 
     }
 
