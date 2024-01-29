@@ -54,5 +54,10 @@ public class Inventory : MonoBehaviour
         if (AddItem(fieldItems.GetItem()))
             fieldItems.DestroyItem();
     }
+
+    public int GetItemCount()
+    {
+        return items.Count;
+    }
     
 }

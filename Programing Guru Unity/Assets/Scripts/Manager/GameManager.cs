@@ -21,11 +21,15 @@ public class GameManager : MonoBehaviour
     private CameraManager theCamera;
     public DialogueManager dManager;
 
+    public Inventory inven;
+
     public AudioSource audioSource;
 
     public bool isAction;
     public int talkIndex;
     public int eventIndex;
+
+    public GameObject isClear;
 
     public GameObject prologue;
     public GameObject livingroom;
@@ -53,6 +57,16 @@ public class GameManager : MonoBehaviour
                 menuSet.SetActive(true);
         }
 
+        //인벤토리의 아이템 개수가 3이면 현관문이 열림
+        if (inven.GetItemCount() == 3)
+        {
+            isClear.SetActive(true);
+        }
+        //4일 경우 마당 문 열림
+        else if(inven.GetItemCount() == 4)
+        {
+
+        }
     }
 
     public void GameSave()
