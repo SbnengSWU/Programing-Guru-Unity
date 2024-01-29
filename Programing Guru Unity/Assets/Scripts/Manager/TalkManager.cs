@@ -35,7 +35,7 @@ public class TalkManager : MonoBehaviour
         //NPC
         talkData.Add(100, new string[] { "뭐 하고 있어?:0", "얼른 집을 둘러봐야지!:0",
                                                 "자, 얼른 다시 가봐!:0","어휴 참... 알겠어! 가요 가!:1" });
-        talkData.Add(200, new string[] { "현관문은 집 안에서 찾아야 할 것들을 전부 찾아야 나갈 수 있어.:0", "총 3개니까, 얼른 다시 찾아봐!:0"});
+        talkData.Add(200, new string[] { "현관문은 집 안에서 찾아야 할 물건을 전부 얻어야 열 수 있어.:0", "총 3개니까, 얼른 다시 찾아봐!:0"});
 
         //Item
         talkData.Add(10000, new string[] { "하트를 주웠다." });

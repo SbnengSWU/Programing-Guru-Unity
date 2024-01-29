@@ -26,6 +26,9 @@ public class TextManager : MonoBehaviour
     private bool isTyping = false;
     private bool canProceed = false;
 
+    public AudioManager theAudio;
+    public string typeSound;
+
     void Start()
     {
         StartCoroutine(StartDialogue());
@@ -49,6 +52,10 @@ public class TextManager : MonoBehaviour
         {
             currentText = fullText.Substring(0, i);
             dialogueText.text = currentText;
+            if (i % 2 == 1)
+            {
+                theAudio.Play(typeSound);   //타이밍 사운드
+            }
             yield return new WaitForSeconds(0.05f); // 타이핑 속도 조절
         }
 
