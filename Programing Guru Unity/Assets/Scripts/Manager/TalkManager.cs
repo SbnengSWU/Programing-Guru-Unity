@@ -30,6 +30,7 @@ public class TalkManager : MonoBehaviour
         talkData.Add(2000, new string[] { "누군가 사용했던 흔적이 있는 책상이다." });
         talkData.Add(3000, new string[] { "내가 방금 일어난 침대다.", "할머니는 어디에 계신 걸까?" });
         talkData.Add(4000, new string[] { "책장이다. \n꽤나 오래 전 책들이 꽂혀 있다." });
+        talkData.Add(1100, new string[] { "협탁 위에 탁상시계가 있다.\n19xx년이라니... 정말 과거로 왔구나." });
 
         //NPC
         talkData.Add(100, new string[] { "뭐 하고 있어?:0", "얼른 집을 둘러봐야지!:0",
@@ -44,6 +45,7 @@ public class TalkManager : MonoBehaviour
         talkData.Add(10300, new string[] { "책상이다. \n예쁜 자수가 놓인 손수건이 놓여 있다.", "뒷 면을 보니 할머니의 성함이 자수로 놓여 있다.", 
                                             "이것도 할머니가 주셨던 손수건이랑 똑같이 생겼어...","손수건을 챙겼다." });   //손수건
         talkData.Add(10400, new string[] { "할머니가 아까 입으셨던 한복과 같은 한복인 것 같다.","낡았지만 관리가 잘 되었는지 깔끔하다.","할머니... 얼른 보고 싶어요.","낡은 한복을 챙겼다." });   //낡은 한복
+
 
 
         //Quest Talk
