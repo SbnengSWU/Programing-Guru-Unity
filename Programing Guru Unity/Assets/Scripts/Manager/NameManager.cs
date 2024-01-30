@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class NameManager : MonoBehaviour
 {
+    
     public InputField playerNameInput;
     public static string playerName = null;
 
-    private void Awake()
+    private void Start()
     {
         playerName = playerNameInput.GetComponent<InputField>().text;
     }

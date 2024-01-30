@@ -35,11 +35,19 @@ public class GameManager : MonoBehaviour
     public GameObject prologue;
     public GameObject livingroom;
 
+    public Text nameText1;
+    public Text nameText2;
+    public string nameName;
+
 
     void Start()
     {
         theCamera = FindObjectOfType<CameraManager>();
         print("Start");
+
+        nameName = PlayerPrefs.GetString("PlayerName");
+        nameText1.text = nameName + "의 방";
+        nameText2.text = nameName + "의 방";
         GameLoad();
     }
 

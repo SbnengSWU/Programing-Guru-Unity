@@ -26,11 +26,25 @@ public class TalkManager : MonoBehaviour
 
 
         //Object
+        //PlayerRoom
         talkData.Add(1000, new string[] { "옷장이다." });
-        talkData.Add(2000, new string[] { "누군가 사용했던 흔적이 있는 책상이다." });
-        talkData.Add(3000, new string[] { "내가 방금 일어난 침대다.", "할머니는 어디에 계신 걸까?" });
-        talkData.Add(4000, new string[] { "책장이다. \n꽤나 오래 전 책들이 꽂혀 있다." });
         talkData.Add(1100, new string[] { "협탁 위에 탁상시계가 있다.\n19xx년이라니... 정말 과거로 왔구나." });
+        talkData.Add(1200, new string[] { "누군가 사용했던 흔적이 있는 책상이다." });
+        talkData.Add(1300, new string[] { "내가 방금 일어난 침대다.", "할머니는 어디에 계신 걸까?" });
+        talkData.Add(1400, new string[] { "책장이다. \n꽤나 오래 전 책들이 꽂혀 있다." });
+        
+        //LivingRoom
+        talkData.Add(2000, new string[] { "찬장이다." });
+        talkData.Add(2100, new string[] { "요즘엔 보기 힘든 책들이 잔뜩 꽂혀 있다." });
+
+        //MasterBedRoom
+        talkData.Add(3000, new string[] { "할머니의 침대다." });
+
+        //Library
+        talkData.Add(4000, new string[] { "종이와 펜 등이 들어 있다." });
+
+        //Yard
+
 
         //NPC
         talkData.Add(100, new string[] { "뭐 하고 있어?:0", "얼른 집을 둘러봐야지!:0",
