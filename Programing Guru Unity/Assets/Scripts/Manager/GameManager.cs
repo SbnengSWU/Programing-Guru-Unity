@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     public int eventIndex;
 
     public GameObject isClear;
+    public GameObject isClear2;
 
     public GameObject prologue;
     public GameObject livingroom;
@@ -65,7 +66,7 @@ public class GameManager : MonoBehaviour
         //4일 경우 마당 문 열림
         else if(inven.GetItemCount() == 4)
         {
-
+            isClear2.SetActive(true);
         }
     }
 

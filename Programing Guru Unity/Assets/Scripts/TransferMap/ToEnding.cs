@@ -7,6 +7,6 @@ public class ToEnding : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene("Clear Scene");  //이후 이벤트씬으로 변경
+        SceneManager.LoadScene("EventScene3");  //이후 이벤트씬으로 변경
     }
 }

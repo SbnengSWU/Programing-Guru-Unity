@@ -101,7 +101,14 @@ public class PlayerManager : PlayerMove
             //Scan Object
             if (Input.GetButtonDown("Jump") && scanObject != null)
             {
-                dManager.Action(scanObject);
+                if (scanObject.name == "Empty")
+                    Debug.Log("해당 오브젝트에 스크립트가 존재하지 않습니다.");
+                else
+                    dManager.Action(scanObject);
+            }
+            else if (Input.GetButtonDown("Jump") && scanObject == null)
+            {
+                dManager.EndAction();
             }
         }
         else

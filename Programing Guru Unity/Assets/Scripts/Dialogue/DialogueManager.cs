@@ -57,6 +57,11 @@ public class DialogueManager : MonoBehaviour
         talkPanel.SetBool("isShow",isAction);
 
     }
+    
+    public void EndAction()
+    {
+        talkPanel.SetBool("isShow", false);
+    }
 
     public bool Talk(int id, bool isNpc, bool isQuestItem)
     {
