@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class EndingText : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class EndingText : MonoBehaviour
     public Image characterImage;
 
     public GameObject background;
+
+    private string playerName;
 
     // 대화 정보 구조체
     [System.Serializable]
@@ -31,6 +34,7 @@ public class EndingText : MonoBehaviour
 
     void Start()
     {
+        playerName = PlayerPrefs.GetString("PlayerName");
         StartCoroutine(StartDialogue());
     }
 
@@ -46,7 +50,27 @@ public class EndingText : MonoBehaviour
         canProceed = false;
 
         string currentText = "";
-        string fullText = conversationLines[currentIndex].text;
+        string fullText = "";
+        if (currentIndex == 1)
+            fullText = playerName + "아(야), 괜찮은거니...?";
+
+        else if (currentIndex == 7)
+        {
+            fullText = "우리 " + playerName + "이(가) 낡았다고  해서 갈아 입었단다. 어때, 이 옷은 좀 괜찮니?";
+            conversationLines[currentIndex].text = "우리 " + playerName + "이(가) 낡았다고  해서 갈아 입었단다. 어때, 이 옷은 좀 괜찮니?";
+        }
+        else if (currentIndex == 10)
+        {
+            fullText = playerName + "아(야)...";
+            conversationLines[currentIndex].text = playerName + "아(야)...";
+        }
+        else if (currentIndex == 11)
+        {
+            fullText = "그래, 우리 " + playerName + "이(가) 입어 달라 사정하니 어쩔 수 없구나. 조금만 기다리거라.";
+            conversationLines[currentIndex].text = "그래, 우리 " + playerName + "이(가) 입어 달라 사정하니 어쩔 수 없구나. 조금만 기다리거라."; ;
+        }
+        else
+            fullText = conversationLines[currentIndex].text;
 
         for (int i = 0; i <= fullText.Length; i++)
         {
@@ -61,6 +85,8 @@ public class EndingText : MonoBehaviour
 
         isTyping = false;
         canProceed = true;
+
+
     }
 
     IEnumerator TransitionToNextScene()

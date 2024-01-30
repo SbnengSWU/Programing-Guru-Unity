@@ -914,23 +914,23 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 08ed4ce1fab2f56478360a43c1966cc9, type: 3}
   - speaker: "\uD560\uBA38\uB2C8 "
     text: "\uC774 \uBA38\uB9AC\uC7A5\uC2DD \uC5B4\uB5A0\uB2C8?"
-    characterSprite: {fileID: 0}
+    characterSprite: {fileID: 7010493653319891774, guid: 464e19aed80c10e4eabe36efd3f53bbc, type: 3}
   - speaker: "\uC8FC\uC778\uACF5"
     text: "\uC74C~ \uB2E4\uB978 \uAC70 \uC5C6\uC5B4\uC694 \uB2E4\uB978 \uAC70? \n\uADF8\uAC83\uBCF4\uB2E8
       \uC880 \uB354 \uD654\uB824\uD558\uBA74 \uC88B\uC744 \uAC83 \uAC19\uC544\uC694."
     characterSprite: {fileID: -2311659948842064771, guid: 50a283891fb9e3c49a89fc892c7a6c98, type: 3}
   - speaker: "\uD560\uBA38\uB2C8 "
     text: "\uADF8\uB7EC\uB0D0\u2026 \uADF8\uB7FC \uC774\uB7F0 \uAC74 \uC5B4\uB5A0\uB2C8?"
-    characterSprite: {fileID: 0}
+    characterSprite: {fileID: 7010493653319891774, guid: 464e19aed80c10e4eabe36efd3f53bbc, type: 3}
   - speaker: "\uC8FC\uC778\uACF5"
     text: "\uD760. \uC774 \uC815\uB3C4\uBA74 \uAD1C\uCC2E\uC740 \uAC83 \uAC19\uC544\uC694!"
     characterSprite: {fileID: -2311659948842064771, guid: 50a283891fb9e3c49a89fc892c7a6c98, type: 3}
   - speaker: "\uD560\uBA38\uB2C8 "
     text: "\uADF8\uB798, \uB2E4\uD589\uC774\uAD6C\uB098."
-    characterSprite: {fileID: 0}
+    characterSprite: {fileID: 7010493653319891774, guid: 464e19aed80c10e4eabe36efd3f53bbc, type: 3}
   - speaker: "\uD560\uBA38\uB2C8 "
     text: "\uC774 \uC637\uC740 \uC5B4\uB5A0\uB2C8? "
-    characterSprite: {fileID: 0}
+    characterSprite: {fileID: 7010493653319891774, guid: 464e19aed80c10e4eabe36efd3f53bbc, type: 3}
   - speaker: "\uC8FC\uC778\uACF5"
     text: "\uC5E5~~ \uBB50\uC608\uC694!! \uC644\uC804 \uB0A1\uC558\uB2E4. \uC0DD\uC2E0\uD30C\uD2F0
       \uB0A0\uC778\uB370 \uC880 \uB354 \uC88B\uC740 \uC637\uC73C\uB85C \uC785\uC73C\uC138\uC694~~ "
@@ -941,7 +941,7 @@ MonoBehaviour:
     characterSprite: {fileID: -2311659948842064771, guid: 50a283891fb9e3c49a89fc892c7a6c98, type: 3}
   - speaker: "\uD560\uBA38\uB2C8 "
     text: "\u2026"
-    characterSprite: {fileID: 0}
+    characterSprite: {fileID: 7010493653319891774, guid: 464e19aed80c10e4eabe36efd3f53bbc, type: 3}
   - speaker: "\uC8FC\uC778\uACF5"
     text: "\uB300\uC2E0\uC5D0 \uC774\uAC74 \uC5B4\uB54C\uC694? \uC720\uBA85\uD55C
       \uB514\uC790\uC774\uB108\uAC00 \uB9CC\uB4E0 \uC637\uC774\uB77C\uACE0 \uBD80\uBAA8\uB2D8\uB3C4
@@ -953,23 +953,23 @@ MonoBehaviour:
     characterSprite: {fileID: -2311659948842064771, guid: 50a283891fb9e3c49a89fc892c7a6c98, type: 3}
   - speaker: "\uD560\uBA38\uB2C8 "
     text: "\u2026\uC544\uB2C8\uB2E4. \uB09C \uC774 \uC637\uC774 \uB354 \uC88B\uC544."
-    characterSprite: {fileID: 0}
+    characterSprite: {fileID: 7010493653319891774, guid: 464e19aed80c10e4eabe36efd3f53bbc, type: 3}
   - speaker: "\uC8FC\uC778\uACF5"
     text: "\uC5D0\uC774 \uADF8\uB7EC\uC9C0\uB9D0\uACE0\uC694~!!"
     characterSprite: {fileID: 0}
   - speaker: "\uD560\uBA38\uB2C8 "
     text: "\uB410\uB2E4!! \uB0B4\uAC00 \uC54C\uC544\uC11C \uD558\uB9C8\u2026!!!"
-    characterSprite: {fileID: 0}
+    characterSprite: {fileID: 7010493653319891774, guid: 464e19aed80c10e4eabe36efd3f53bbc, type: 3}
   - speaker: "\uC8FC\uC778\uACF5"
     text: "\uD5C9\u2026"
     characterSprite: {fileID: -2311659948842064771, guid: 50a283891fb9e3c49a89fc892c7a6c98, type: 3}
   - speaker: "\uD560\uBA38\uB2C8 "
     text: "\u2026!!"
-    characterSprite: {fileID: 0}
+    characterSprite: {fileID: 7010493653319891774, guid: 464e19aed80c10e4eabe36efd3f53bbc, type: 3}
   - speaker: "\uD560\uBA38\uB2C8 "
     text: "\u2026 \uBBF8\uC548\uD558\uB2E4. \uBC16\uC5D0\uC11C \uBA38\uB9AC \uC880
       \uC2DD\uD788\uACE0 \uC624\uB9C8\u2026"
-    characterSprite: {fileID: 0}
+    characterSprite: {fileID: 7010493653319891774, guid: 464e19aed80c10e4eabe36efd3f53bbc, type: 3}
   - speaker: "\uC8FC\uC778\uACF5"
     text: "\uD560\uBA38\uB2C8\u2026"
     characterSprite: {fileID: -2311659948842064771, guid: 50a283891fb9e3c49a89fc892c7a6c98, type: 3}
