@@ -19,4 +19,8 @@ public class Slot : MonoBehaviour
         item = null;
         itemIcon.gameObject.SetActive(false);
     }
+    public void UseItem()
+    {
+        DialogueManager.instance.ActionForItem(item.itemcode);
+    }
 }

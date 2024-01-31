@@ -39,6 +39,7 @@ public class DialogueManager : MonoBehaviour
 
     private int count; //대화 진행 상황 카운트
     public bool isAction;
+    public bool isSlot = false;
     public bool isQuestItem;
 
     public Animator animSprite;
@@ -52,25 +53,24 @@ public class DialogueManager : MonoBehaviour
         //액션 컨트롤 -> Talk로 위임
         scanObject = scanObj;
         ObjData objData = scanObject.GetComponent<ObjData>();
-        isAction = Talk(objData.id, objData.isNpc, objData.isQuestItem);
+        isAction = Talk(objData.id, objData.isNpc);
 
         talkPanel.SetBool("isShow",isAction);
 
     }
-    /*public void ActionForItem(int itemcode)
+    public void ActionForItem(int itemcode)
     {
-        //액션 컨트롤 -> Talk로 위임
         isAction = Talk(itemcode, false);
 
         talkPanel.SetBool("isShow", isAction);
-    }*/
+    }
 
     public void EndAction()
     {
         talkPanel.SetBool("isShow", false);
     }
 
-    public bool Talk(int id, bool isNpc, bool isQuestItem)
+    public bool Talk(int id, bool isNpc)
     {
         string talkData = "";
 
