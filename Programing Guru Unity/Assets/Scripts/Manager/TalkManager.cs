@@ -32,7 +32,8 @@ public class TalkManager : MonoBehaviour
         talkData.Add(1200, new string[] { "누군가 사용했던 흔적이 있는 책상이다." });
         talkData.Add(1300, new string[] { "내가 방금 일어난 침대다.", "할머니는 어디에 계신 걸까?" });
         talkData.Add(1400, new string[] { "책장이다. \n꽤나 오래 전 책들이 꽂혀 있다." });
-        
+        talkData.Add(1500, new string[] { "장난감 상자다." });
+
         //LivingRoom
         talkData.Add(2000, new string[] { "찬장이다." });
         talkData.Add(2100, new string[] { "요즘엔 보기 힘든 책들이 잔뜩 꽂혀 있다." });
@@ -49,7 +50,7 @@ public class TalkManager : MonoBehaviour
         //NPC
         talkData.Add(100, new string[] { "뭐 하고 있어?:0", "얼른 집을 둘러봐야지!:0",
                                                 "자, 얼른 다시 가봐!:0","어휴 참... 알겠어! 가요 가!:1" });
-        talkData.Add(200, new string[] { "현관문은 집 안에서 찾아야 할 물건을 전부 얻어야 열 수 있어.:0", "총 3개니까, 얼른 다시 찾아봐!:0"});
+        talkData.Add(200, new string[] { "현관문은 집 안에서 찾아야 할 물건을 전부 얻어야 열 수 있어.:0", "총 3개니까, 얼른 다시 찾아봐!:0","참, 그리고 마당에 무서운 강아지가 있더라. \n날 먹으려고 했어... 나갈 때 조심해!:0"});
 
         //Item
         talkData.Add(10000, new string[] { "하트를 주웠다." });

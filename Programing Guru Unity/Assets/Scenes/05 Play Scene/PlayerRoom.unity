@@ -17743,6 +17743,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ToyBox
       objectReference: {fileID: 0}
+    - target: {fileID: 1197517748731303511, guid: 252ec35267aa05e4995b50dcca1a0180, type: 3}
+      propertyPath: id
+      value: 1500
+      objectReference: {fileID: 0}
     - target: {fileID: 1197517748731303515, guid: 252ec35267aa05e4995b50dcca1a0180, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -27340,6 +27344,7 @@ MonoBehaviour:
   rendererDialogueWindow: {fileID: 0}
   prePortrait: {fileID: 0}
   isAction: 0
+  isSlot: 0
   isQuestItem: 0
   animSprite: {fileID: 0}
   animDialogueWindow: {fileID: 0}
