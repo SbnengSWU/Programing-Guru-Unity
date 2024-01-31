@@ -87,8 +87,9 @@
     <Compile Include="Assets\Scenes\02 Name Scene\Name.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Manager\NPCManager.cs" />
-    <Compile Include="Assets\Scripts\Quest\QuestData.cs" />
     <Compile Include="Assets\Scripts\Event\TextManager.cs" />
+    <Compile Include="Assets\Scripts\Quest\QuestData.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scenes\03 Manual\Fonts\fonts-master\fonts-master\LICENSE.txt" />
