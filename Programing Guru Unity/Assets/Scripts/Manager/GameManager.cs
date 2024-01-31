@@ -74,12 +74,12 @@ public class GameManager : MonoBehaviour
         }
 
         //인벤토리의 아이템 개수가 3이면 현관문이 열림
-        if (inven.GetItemCount() == 3)
+        if (inven.GetItemCount() >= 3)
         {
             isClear.SetActive(true);
         }
         //4일 경우 마당 문 열림
-        else if(inven.GetItemCount() == 4)
+        else if(inven.GetItemCount() >= 4)
         {
             isClear2.SetActive(true);
         }

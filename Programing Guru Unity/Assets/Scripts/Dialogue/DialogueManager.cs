@@ -57,7 +57,14 @@ public class DialogueManager : MonoBehaviour
         talkPanel.SetBool("isShow",isAction);
 
     }
-    
+    /*public void ActionForItem(int itemcode)
+    {
+        //액션 컨트롤 -> Talk로 위임
+        isAction = Talk(itemcode, false);
+
+        talkPanel.SetBool("isShow", isAction);
+    }*/
+
     public void EndAction()
     {
         talkPanel.SetBool("isShow", false);
