@@ -3883,6 +3883,22 @@ MonoBehaviour:
   talkManager: {fileID: 1847966722}
   dManager: {fileID: 1538334142}
   inven: {fileID: 1651077698}
+  item11:
+    itemType: 0
+    itemName: TeddyBear
+    itemImage: {fileID: 1762600211799945471, guid: 7240bbf4fbb9b9349905d7af8a747ab4, type: 3}
+  item21:
+    itemType: 0
+    itemName: Necklace
+    itemImage: {fileID: -2919378836723705254, guid: 3e7c70c2e04662342aae434b8249b388, type: 3}
+  item31:
+    itemType: 0
+    itemName: Handkerchief
+    itemImage: {fileID: -6556667986676761837, guid: 79bf9cbcaaefcc549bcecc01c2f2c4fe, type: 3}
+  item41:
+    itemType: 0
+    itemName: OldHanbok
+    itemImage: {fileID: 7480767552785783633, guid: c3720bc9b5cf0c3488126d9eef90bc30, type: 3}
   audioSource: {fileID: 1208787448}
   isAction: 0
   talkIndex: 0
@@ -3915,6 +3931,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2100470921}
     m_Modifications:
+    - target: {fileID: 7903995490159396432, guid: 1d7af95b262663b438932a09c9e73771, type: 3}
+      propertyPath: item.itemName
+      value: Handkerchief
+      objectReference: {fileID: 0}
     - target: {fileID: 7903995490159396432, guid: 1d7af95b262663b438932a09c9e73771, type: 3}
       propertyPath: item.itemImage
       value: 
@@ -10276,6 +10296,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2100470921}
     m_Modifications:
+    - target: {fileID: 7903995490159396432, guid: 1d7af95b262663b438932a09c9e73771, type: 3}
+      propertyPath: item.itemName
+      value: Old Hanbok
+      objectReference: {fileID: 0}
     - target: {fileID: 7903995490159396432, guid: 1d7af95b262663b438932a09c9e73771, type: 3}
       propertyPath: item.itemImage
       value: 
@@ -16934,15 +16958,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemDB:
-  - itemType: 1
+  - itemType: 2
     itemName: Heart
     itemImage: {fileID: -855298285791758126, guid: 20bf6e9dd380d2c4b8426c57b6b5fc93, type: 3}
-  - itemType: 0
-    itemName: 
-    itemImage: {fileID: 0}
-  - itemType: 0
-    itemName: 
-    itemImage: {fileID: 0}
+  - itemType: 2
+    itemName: TeddyBear
+    itemImage: {fileID: 1762600211799945471, guid: 7240bbf4fbb9b9349905d7af8a747ab4, type: 3}
+  - itemType: 2
+    itemName: Necklace
+    itemImage: {fileID: -2919378836723705254, guid: 3e7c70c2e04662342aae434b8249b388, type: 3}
+  - itemType: 2
+    itemName: Handkerchief
+    itemImage: {fileID: -6556667986676761837, guid: 79bf9cbcaaefcc549bcecc01c2f2c4fe, type: 3}
+  - itemType: 2
+    itemName: Old Hanbok
+    itemImage: {fileID: 7480767552785783633, guid: c3720bc9b5cf0c3488126d9eef90bc30, type: 3}
   fieldItemPrefab: {fileID: 0}
   pos: []
 --- !u!4 &905000706
@@ -24238,6 +24268,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2100470921}
     m_Modifications:
+    - target: {fileID: 7903995490159396432, guid: 1d7af95b262663b438932a09c9e73771, type: 3}
+      propertyPath: item.itemName
+      value: Necklace
+      objectReference: {fileID: 0}
     - target: {fileID: 7903995490159396432, guid: 1d7af95b262663b438932a09c9e73771, type: 3}
       propertyPath: item.itemImage
       value: 
@@ -36681,6 +36715,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2100470921}
     m_Modifications:
+    - target: {fileID: 7903995490159396432, guid: 1d7af95b262663b438932a09c9e73771, type: 3}
+      propertyPath: item.itemName
+      value: TeddyBear
+      objectReference: {fileID: 0}
     - target: {fileID: 7903995490159396432, guid: 1d7af95b262663b438932a09c9e73771, type: 3}
       propertyPath: item.itemImage
       value: 

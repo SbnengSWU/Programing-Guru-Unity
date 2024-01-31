@@ -22,6 +22,10 @@ public class GameManager : MonoBehaviour
     public DialogueManager dManager;
 
     public Inventory inven;
+    public Item item11;
+    public Item item21;
+    public Item item31;
+    public Item item41;
 
     public AudioSource audioSource;
 
@@ -46,8 +50,11 @@ public class GameManager : MonoBehaviour
         print("Start");
 
         nameName = PlayerPrefs.GetString("PlayerName");
-        nameText1.text = nameName + "狼 规";
-        nameText2.text = nameName + "狼 规";
+        if(nameName != "")
+        {
+            nameText1.text = nameName + "狼 规";
+            nameText2.text = nameName + "狼 规";
+        }
         GameLoad();
     }
 
@@ -135,6 +142,52 @@ public class GameManager : MonoBehaviour
                 livingroom.SetActive(false);
                 break;
         }
+
+        string item1 = PlayerPrefs.GetString("Item1");
+        string item2 = PlayerPrefs.GetString("Item2");
+        string item3 = PlayerPrefs.GetString("Item3");
+
+        switch (item1)
+        {
+            case "TeddyBear" :
+                inven.AddItem(item11);
+                break;
+            case "Necklace":
+                inven.AddItem(item21);
+                break;
+            case "Handkerchief":
+                inven.AddItem(item31);
+                break;
+
+        }
+        switch (item2)
+        {
+            case "TeddyBear":
+                inven.AddItem(item11);
+                break;
+            case "Necklace":
+                inven.AddItem(item21);
+                break;
+            case "Handkerchief":
+                inven.AddItem(item31);
+                break;
+
+        }
+        switch (item3)
+        {
+            case "TeddyBear":
+                inven.AddItem(item11);
+                break;
+            case "Necklace":
+                inven.AddItem(item21);
+                break;
+            case "Handkerchief":
+                inven.AddItem(item31);
+                break;
+
+        }
+        if(PlayerPrefs.HasKey("Item4"))
+            inven.AddItem(item41);
 
         theCamera.transform.position = new Vector3(x, y, -10);
         player.transform.position = new Vector3(x, y, -1);

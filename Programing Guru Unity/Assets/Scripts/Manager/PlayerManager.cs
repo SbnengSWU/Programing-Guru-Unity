@@ -13,6 +13,7 @@ public class PlayerManager : PlayerMove
 
     float h;
     float v;
+    float a = 1;
     bool isHorizonMove;
     bool isVerticalMove;
 
@@ -93,6 +94,10 @@ public class PlayerManager : PlayerMove
             else
                 anim.SetBool("isChange", false);
 
+            if (Input.GetKey(KeyCode.LeftShift))
+                speed = 7;
+            else
+                speed = 5;
 
             Vector2 dir = new Vector2(h, v) * speed;
             rigid.velocity = dir;

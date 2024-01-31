@@ -34,6 +34,24 @@ public class Inventory : MonoBehaviour
         {
             items.Add(_item);
             invui.RedrawSlotUI();
+
+            switch (items.Count)
+            {
+                case 1:
+                    PlayerPrefs.SetString("Item1",_item.itemName);
+                    break;
+                case 2:
+                    PlayerPrefs.SetString("Item2", _item.itemName);
+                    break;
+                case 3:
+                    PlayerPrefs.SetString("Item3", _item.itemName);
+                    break;
+                case 4:
+                    PlayerPrefs.SetString("Item4", _item.itemName);
+                    Debug.Log(_item.itemName);
+                    break;
+            }
+
             return true;
         }
         return false;

@@ -956,7 +956,7 @@ MonoBehaviour:
     characterSprite: {fileID: 7010493653319891774, guid: 464e19aed80c10e4eabe36efd3f53bbc, type: 3}
   - speaker: "\uC8FC\uC778\uACF5"
     text: "\uC5D0\uC774 \uADF8\uB7EC\uC9C0\uB9D0\uACE0\uC694~!!"
-    characterSprite: {fileID: 0}
+    characterSprite: {fileID: -2311659948842064771, guid: 50a283891fb9e3c49a89fc892c7a6c98, type: 3}
   - speaker: "\uD560\uBA38\uB2C8 "
     text: "\uB410\uB2E4!! \uB0B4\uAC00 \uC54C\uC544\uC11C \uD558\uB9C8\u2026!!!"
     characterSprite: {fileID: 7010493653319891774, guid: 464e19aed80c10e4eabe36efd3f53bbc, type: 3}

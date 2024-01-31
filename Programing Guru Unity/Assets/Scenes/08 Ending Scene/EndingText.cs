@@ -51,26 +51,59 @@ public class EndingText : MonoBehaviour
 
         string currentText = "";
         string fullText = "";
-        if (currentIndex == 1)
-            fullText = playerName + "아(야), 괜찮은거니...?";
 
-        else if (currentIndex == 7)
+        if (playerName != "")
         {
-            fullText = "우리 " + playerName + "이(가) 낡았다고  해서 갈아 입었단다. 어때, 이 옷은 좀 괜찮니?";
-            conversationLines[currentIndex].text = "우리 " + playerName + "이(가) 낡았다고  해서 갈아 입었단다. 어때, 이 옷은 좀 괜찮니?";
-        }
-        else if (currentIndex == 10)
-        {
-            fullText = playerName + "아(야)...";
-            conversationLines[currentIndex].text = playerName + "아(야)...";
-        }
-        else if (currentIndex == 11)
-        {
-            fullText = "그래, 우리 " + playerName + "이(가) 입어 달라 사정하니 어쩔 수 없구나. 조금만 기다리거라.";
-            conversationLines[currentIndex].text = "그래, 우리 " + playerName + "이(가) 입어 달라 사정하니 어쩔 수 없구나. 조금만 기다리거라."; ;
+            if (currentIndex == 1)
+            {
+                fullText = playerName + "아(야), 괜찮은거니...?";
+                conversationLines[currentIndex].text = playerName + "아(야), 괜찮은거니...?";
+            }
+
+            else if (currentIndex == 7)
+            {
+                fullText = "우리 " + playerName + "이(가) 낡았다고 해서 갈아 입었단다. 어때, 이 옷은 좀 괜찮니?";
+                conversationLines[currentIndex].text = "우리 " + playerName + "이(가) 낡았다고  해서 갈아 입었단다. 어때, 이 옷은 좀 괜찮니?";
+            }
+            else if (currentIndex == 10)
+            {
+                fullText = playerName + "아(야)...";
+                conversationLines[currentIndex].text = playerName + "아(야)...";
+            }
+            else if (currentIndex == 11)
+            {
+                fullText = "그래, 우리 " + playerName + "이(가) 입어 달라 사정하니 어쩔 수 없구나. 조금만 기다리거라.";
+                conversationLines[currentIndex].text = "그래, 우리 " + playerName + "이(가) 입어 달라 사정하니 어쩔 수 없구나. 조금만 기다리거라."; ;
+            }
+            else
+                fullText = conversationLines[currentIndex].text;
         }
         else
-            fullText = conversationLines[currentIndex].text;
+        {
+            if (currentIndex == 1)
+            {
+                fullText = playerName + "나리야, 괜찮은거니...?";
+                conversationLines[currentIndex].text = "나리야, 괜찮은거니...?";
+            }
+
+            else if (currentIndex == 7)
+            {
+                fullText = "우리 나리가 낡았다고 해서 갈아 입었단다. 어때, 이 옷은 좀 괜찮니?";
+                conversationLines[currentIndex].text = "우리 나리가 낡았다고  해서 갈아 입었단다. 어때, 이 옷은 좀 괜찮니?";
+            }
+            else if (currentIndex == 10)
+            {
+                fullText = playerName + "나리야...";
+                conversationLines[currentIndex].text = "나리야...";
+            }
+            else if (currentIndex == 11)
+            {
+                fullText = "그래, 우리 나리가 입어 달라 사정하니 어쩔 수 없구나. 조금만 기다리거라.";
+                conversationLines[currentIndex].text = "그래, 우리 나리가 입어 달라 사정하니 어쩔 수 없구나. 조금만 기다리거라."; ;
+            }
+            else
+                fullText = conversationLines[currentIndex].text;
+        }
 
         for (int i = 0; i <= fullText.Length; i++)
         {
