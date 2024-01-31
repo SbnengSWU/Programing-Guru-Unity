@@ -124,7 +124,7 @@ public class EndingText : MonoBehaviour
 
     IEnumerator TransitionToNextScene()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(4f);
 
         // 현재 씬 이름에 따라 다음 씬으로 전환
         string currentSceneName = SceneManager.GetActiveScene().name;
