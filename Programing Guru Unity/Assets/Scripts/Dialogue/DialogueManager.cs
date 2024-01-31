@@ -54,6 +54,14 @@ public class DialogueManager : MonoBehaviour
         talkPanel.SetBool("isShow",isAction);
     }
 
+    public void ActionForItem(int itemcode)
+    {
+        //액션 컨트롤 -> Talk로 위임
+        isAction = Talk(itemcode, false);
+
+        talkPanel.SetBool("isShow", isAction);
+    }
+
     public bool Talk(int id, bool isNpc)
     {
         int questTalkIndex = questManager.GetQuestTalkIndex(id);
