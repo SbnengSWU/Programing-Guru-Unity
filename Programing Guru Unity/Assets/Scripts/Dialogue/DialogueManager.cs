@@ -53,14 +53,14 @@ public class DialogueManager : MonoBehaviour
         //액션 컨트롤 -> Talk로 위임
         scanObject = scanObj;
         ObjData objData = scanObject.GetComponent<ObjData>();
-        isAction = Talk(objData.id, objData.isNpc);
+        isAction = Talk(objData.id, objData.isNpc, objData.isQuestItem);
 
         talkPanel.SetBool("isShow",isAction);
 
     }
     public void ActionForItem(int itemcode)
     {
-        isAction = Talk(itemcode, false);
+        isAction = Talk(itemcode, false, true);
 
         talkPanel.SetBool("isShow", isAction);
     }
@@ -70,7 +70,7 @@ public class DialogueManager : MonoBehaviour
         talkPanel.SetBool("isShow", false);
     }
 
-    public bool Talk(int id, bool isNpc)
+    public bool Talk(int id, bool isNpc, bool isQuestItem)
     {
         string talkData = "";
 

@@ -48,7 +48,6 @@ public class Inventory : MonoBehaviour
                     break;
                 case 4:
                     PlayerPrefs.SetString("Item4", _item.itemName);
-                    Debug.Log(_item.itemName);
                     break;
             }
 
@@ -61,8 +60,8 @@ public class Inventory : MonoBehaviour
     {
         if (collision.CompareTag("FieldItem"))
         {
+            Debug.Log("»Æ¿Œ");
             fieldItems = collision.GetComponent<FieldItems>();
-
 
         }
     }
