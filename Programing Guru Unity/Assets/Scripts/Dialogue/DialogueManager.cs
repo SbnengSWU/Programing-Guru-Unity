@@ -60,7 +60,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void ActionForItem(int itemcode)
     {
-        isAction = Talk(itemcode, false, true);
+        isAction = Talk(itemcode, false, false);
 
         talkPanel.SetBool("isShow", isAction);
     }
